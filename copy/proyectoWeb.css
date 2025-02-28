@@ -1,4 +1,4 @@
-/*------gobal styles--------*/
+/*gobal styles*/
 * {
     margin: 0;
     padding: 0;
@@ -54,8 +54,7 @@ p {
     color: #f3f3f3;
     font-size: 0.85em;
     font-weight: lighter;
-    line-height: 1.1rem;
-    letter-spacing: 8%;
+    line-height: 1rem;
     text-align: left;
     margin-bottom: 1rem;
     }
@@ -66,17 +65,14 @@ ul, ol, li, a {
     color: #f3f3f3;
     font-weight: lighter;
     line-height: 2rem;
-    
 }
 
 span{
     color: #f3f3f3;
-    font-size: 16px;
-    line-height:10px;
+    font-size: 0.85em;
     font-weight: lighter;
-
+    line-height: 1rem;
 }
-
 
 
 /*------HEADER--------*/
@@ -170,25 +166,22 @@ svg{
 /*---presentation----*/
 .presentation{
     min-width: 200px;
-    max-width: 1fr;
+    max-width: 600px;
     min-height: 100px;
-    max-height: 1fr;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 60px;
 }
 
 .image-container1{
-    margin-left: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-height: 250px;
+    padding-left: 1rem;
+    margin-bottom: 20px;
+    grid-row-start: 2;
+    display: flex;
+    object-fit: cover;
+    
 }
-
-.image1{
-    width: 100%;
-    height: auto;
-}
-
 #welcome {
     height: auto;
     grid-row-start: 3;
@@ -210,42 +203,25 @@ svg{
     display: none;
 }
 
-/*---projects works---------*/
+/*---projects & creative process-------------------*/
 
-.projectos{
-    height: 680px;
-    width: 400px; 
-    margin-bottom: 4rem; 
+.projects{
+    height: 580px;
+    width: 400px;
 }
 
+
 .projects__grid-container{
-    margin-left: 1rem ;
+    margin-left: 2.5rem ;
     display: grid;
-    grid-template-columns: repeat(200px, 1fr 1fr);
-    grid-template-rows: repeat(2, 200);
+    grid-template-columns: 2, 150px;
+    grid-template-rows: 2, 200;
     gap: 1em;
     grid-template-areas:
     "#box1 #box2"
     "#box3, #box4";
-}
-.project1{
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: 190px;
-    width: 190px;
-    gap: 1rem;
-    background-color: #f3f3f3;
-    color: #fefefe;
-    font-weight: lighter;
-    font-size: 1rem;    
-}
-
-.overlap{
-    background-color: rgba(0, 0, 0, 0.70);
-    border-radius: 8px;
-    font-size: 16px;
-    padding: 1em;
+    
+    
 }
 
 #box1{
@@ -268,44 +244,54 @@ svg{
 }
 
 
-/*-----creative process-------*/
+.project1{
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 180px;
+    width: 180px;
+    gap: 1rem;
+    background-color: #f3f3f3;
+    color: #fefefe;
+    font-weight: lighter;
+    font-size: 1rem;    
+}
+
+.overlap{
+    color: #f3f3f3;
+    background-color: rgba(0, 0, 0, 0.70);
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 1em;
+    width: 180px;
+}
 
 .process{
-    height: 680px;
-    width: 400px; 
     margin-bottom: 4rem;
-    
 }
 
-.grid-container{
-    display: grid;
-    grid-template-columns: 430px;
-    grid-template-rows: repeat(2, 340px);
-    grid-template-areas:
-    "#box5"
-    "#box6"
-    "#box7"
-    "#box8";
-}
-
-.creat-process{
-    margin-left: 1rem;
-    gap: 1rem;
+#process{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
 
 .project2{
-    height: 340px;
-    width: 400px; 
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    width: 220px;
+    margin: 10px;
     padding: 1em;
     background-color: #f3f3f3;
     color: #fefefe;
     font-weight: lighter;
     font-size: 0.8rem;  
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:space-evenly;
 }
 
 .overlap1{
@@ -313,8 +299,8 @@ svg{
     background-color: rgba(0, 0, 0, 0.70);
     border-radius: 8px;
     font-size: 16px;
+    width: 140px;
     padding: 1em;
-
 }
 
 .overlap:hover{
@@ -346,47 +332,40 @@ button:hover{
 
 
 /*----------skills-------------------------------*/
-.skillss{
-    height: 600px;
-    width: 400px; 
+
+.skills{
     margin-bottom: 4rem;
 }
 
-.skills{
-    margin-left: 1rem;
-}
-
-.skills-gridcontainer{
-    
-    display: grid;
-    grid-template-columns: 400px;
-    grid-template-rows:  repeat(4, 70px);
-    gap: 1em;
-    grid-template-areas:
-    "#adobe"
-    "#figma"
-    "#fullstack"
-    "#microsoft";
+.label{
+    margin-left: 1.5rem;
+    margin-bottom: 2.5px;
+    padding: 1em;
+    color:#f3f3f3;
+    font-family:system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.6rem;
 }
 
 .blockquote{
-    height: 80px;
-    width: 400px; 
-    text-wrap: no-wrap;
-    border-radius: 8px;
-    border-color: #333;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #F37887;
-    font-weight: lighter;
-}
-   
-/*---contact-------------------*/
-
-
-.about-me{
-    height: 600;
     width: 400px;
-    margin-bottom: 6rem;
+    height: 56px;
+    padding: 1em;
+    margin-left: 1rem;
+    border-radius: 8px;
+    background-color: #F37887;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #f3f3f3;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: 1em;
+}
+
+/*---contact--------------------------------------*/
+
+.about{
+    margin-bottom: 4rem;
 }
 
 .perfil-container{
@@ -402,47 +381,38 @@ button:hover{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.direct-contact{
-    margin-bottom: 4rem;
-}
-
-
-.contact-list{
-    margin-left: 2rem;
-}
-
-
-/*---formulaire---------------------*/
-.titulo-form{
-    margin-bottom: -2rem;
-}
+/*----formulaire----------------------------------*/
 
 .form-container {
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
     margin-left: 1rem;
     background-color: #f3f3f3;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    width: 380px; 
+    width: 70%;
+    width: 400px; 
 }
 
 .form-group {
-    margin: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
 }
 
 .label-form {
     display: block;
-    margin-left: 1rem;
+    margin-left: 2rem;
     margin-bottom: 3px;
     font-family: system-ui, sans-serif;
     font-size: 1rem;
-    color: #3d3c3c;
+    color: #555;
 }
 
-.input-form{
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
     width: 95%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -450,8 +420,11 @@ button:hover{
     font-size: 16px;
 }
 
-.input-form:hover{
-    border-color: #3d3c3c;
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+    border-color: #F37887;
     outline: none;
 }
 
@@ -470,7 +443,17 @@ button:hover{
     background-color: orange;
 }
 
+.direct-contact{
+    margin-bottom: 4rem;
+}
+.contact-me{
+    color: #f5596c;
 
+}
+
+.contact-list{
+    margin-left: 2rem;
+}
 
 
 /* ------Footer--------------------------------- */
@@ -529,6 +512,7 @@ button:hover{
 
     h2 {
         font-size: 2.4em;
+        letter-spacing: o.4rem;
         line-height: 2.3rem;
         padding-left: 1.5rem;
         margin-bottom: 0.10%;
@@ -548,13 +532,9 @@ button:hover{
         margin-left: 2rem;
     }
 
-    h4{
-        font-size: 30px;
-    }
-
     p {
-        width: 550px; 
-        padding: 2rem;
+        width: 450px; 
+        padding-left: 2.5rem;
         min-height: 60px;
         font-size: 1.3rem;
         line-height: 1.3;
@@ -566,27 +546,9 @@ button:hover{
         font-size: 50px;
         max-width: 80px;
     }
-
-    span{
-        font-size: 20px;
-        line-height: normal;
-    }
-    li {
-        font-size: 20px;
-    }
-
-
-
-/*---END titles &paragraph mediaQueries----*/
+/*-END mediaQueries for titles &paragraphs-----*/
 /*-----header media queries----*/
-    .header{
-        height: 200px;
-    }
-    #logo-container{
-        height: 65px;
-        width: auto;
-    }
-   
+
     .nav__icone{
         display: none;
     }
@@ -600,7 +562,7 @@ button:hover{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 5rem;
+        padding: 4rem;
         gap: 1rem;
     }
 
@@ -609,50 +571,58 @@ button:hover{
     }
   
 /* -----End HEADER media queries--------*/
-/*-------MAIN media Queries-----------------*/
-/*------!!!!!!hacer imagenes POP!!!!!------*/
+/*-------MAIN media Queries------------------------*/
+
+@media only screen and (min-width: 600px) { 
     
-    /*---presentation media queries----------*/
+    /*---presentation media queries----------------*/
     .titulo1{
         grid-row-start: 1;
         grid-column-start: 1;
         transition: all 0.5s ease-in-out;
     }
     .image-container1{     
-        
+        grid-row-start: 2;
+        grid-column-start: 1;
+        width: auto;      
+        max-height: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        z-index: 1; 
+        margin-bottom: 5rem;
         transition: all 0.5s ease-in-out;
 
     }
     .image1{
         width: auto;      
         max-height: 650px;
-        margin-left: 7rem;  
-        margin-bottom: 6rem;          
+        margin-left: 7rem;            
     }
 
     #welcome{
         height: 150px;
-        width: 550px;
-        padding: 2.5rem;
+        width: 500px;
+        padding: 1rem;
         grid-row-start: 3;
         grid-column-start: 1;
-        margin-top: -37rem;
-        margin-left: 4rem;
+        margin-top: -25rem;
+        margin-right: 5rem;
         background-color: #3d3c3c;
         z-index: 3;
         transition: all 0.5s ease-in-out;
     }
-    /*---back-button media queries -------*/
+    /*---back-button media queries ----------------*/
     .back-button{
         bottom: 60px;
         right: 60px;
     }
 
-    /* --- work media queries-------------*/
+    /* --- work media queries---------------------*/
     .projects__grid-container{
         height: 900px;
         grid-template-columns: 4, 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1, 400px;
         grid-template-areas: 
         "#box1 #box2 #box3 #box4";  
     }
@@ -666,7 +636,7 @@ button:hover{
         padding: 1em;
         transition: all 0.3s ease-in-out;
         }
-   
+    }
     #box1{
         grid-column-start: 1;
         grid-row-start: 1;
@@ -685,47 +655,74 @@ button:hover{
     }
 
     /* --- creative process media queries -------- */
-    .process{
-        height: 800px;
-        width:900px;
+    .grid-container{
+        grid-template-columns: 4, 1fr;
+        grid-template-rows: 400px;
+        grid-template-areas: 
+        "#box5 #box6 #box7 #box8";
+        margin-bottom: 5rem;
     }
-   
-    .projects2{
-        height: 160px;
-        width: 180px;
+    .creat-process{
+        margin-left: -18rem;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .project2{
+        
         display: flex;
         flex-direction: row;
         align-items: left;
         padding: 1em;
-        transition: all 0.3s ease-in-out;
-    }   
-
+        height: 250px;
+        width: 250px;
+    }
     .overlap1{
         height: 50px;
         width: 200px;
     }
 
-
-
     /*-- skills media queries---------------------*/
-   #grid-mediaquery{
+    .eachSkills{
+        margin-right: 4rem;
+        margin-left: 4rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row: 1fr 1fr;
-   }
-    .blockquote{
-        width: 500px;
-        height: 80px;
-        margin: 1rem;
-        font-size: 1.5rem;
-        padding: 1em;
-        transition: all 0.5s ease-in-out;
-        display: flex;
-        align-items: center;
-        justify-content:center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1, 400px;
     }
 
+    .label{
+        height: 70px;
+        max-width: 150px;
+        margin-left: 2rem;
+        padding: 0;
+    }
+
+    .blockquote{
+        max-width: 400px;
+        height: 120px;
+        font-size: 1.5rem;
+        padding: 1em;
+        margin-bottom: 4rem;   
+        transition: all 0.5s ease-in-out;
+    }
+
+    .label {
+        font-size: 1.5rem;  
+        padding: 0.5em;
+    }
+
+
     /* ----- about & form media queries-----*/
+    .about-me{
+        display: grid;
+        grid-template-columns: 2, 1fr;
+        grid-row: 1, 800px;
+        grid-template-areas: 
+        "about1 contact-me";
+    }
+
     .about1{
         margin-top: -65px;
         grid-column-start: 1;
@@ -748,8 +745,8 @@ button:hover{
         font-size: 1.2rem;  
     }
 
-/*------END MAIN media queries-------*/
-/*----------footer Media Queries-----*/
+/*------END MAIN media queries--------------------*/
+/*----------footer Media Queries----------------*/
 
 .footer__nav-item{
     font-size: 0.90rem;
@@ -761,5 +758,5 @@ button:hover{
     letter-spacing: 0.2rem;
 }
 }
-/*----------END footer Media Queries--*/
-/*/---------THE END------------------*/
+/*----------END footer Media Queries-------------*/
+/*/---------THE END-------------------------------*/
